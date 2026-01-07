@@ -5,6 +5,8 @@ import Works from "./pages/Works";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
+import "./App.css";
+
 const App = () => {
     return (
         <Routes>
