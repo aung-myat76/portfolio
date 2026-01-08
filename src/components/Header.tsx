@@ -1,20 +1,23 @@
 import type { FC, ReactNode } from "react";
 import Nav from "./Nav";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 type HeaderType = {
     children: ReactNode;
+    active: string;
 };
 
-const Header: FC<HeaderType> = ({ children }) => {
+const Header: FC<HeaderType> = ({ active, children }) => {
     return (
         <div
             id="header"
-            className="bg-emerald-400 text-stone-100 flex items-center justify-between p-1">
+            className="fixed w-full top-0 left-0 z-10 p-4 bg-emerald-400 text-stone-100 flex items-center justify-between p-1">
             <header className="text-lg font-bold text-emerald-900">
-                <Link to={"/"}>{children}</Link>
+                <HashLink smooth to={"#about"}>
+                    {children}
+                </HashLink>
             </header>
-            <Nav />
+            <Nav active={active} />
         </div>
     );
 };
