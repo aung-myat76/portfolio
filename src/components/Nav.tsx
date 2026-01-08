@@ -1,6 +1,5 @@
 import { HashLink } from "react-router-hash-link";
 import { FaUser, FaBriefcase, FaTools, FaEnvelope } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
 import type { FC } from "react";
 
 type NavType = {
@@ -8,8 +7,6 @@ type NavType = {
 };
 
 const Nav: FC<NavType> = ({ active }) => {
-    const path = useLocation();
-
     console.log(active);
 
     return (

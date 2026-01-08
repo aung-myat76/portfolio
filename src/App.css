@@ -1,13 +1,11 @@
 @import "tailwindcss";
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+body {
+    @apply text-emerald-900;
+}
 
 #about {
-    background: url("./assets/profile3.png") no-repeat center;
+    background: url("./assets/profile4.png") no-repeat center;
     background-size: auto;
     width: 100%;
 }
