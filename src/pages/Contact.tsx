@@ -4,7 +4,7 @@ import type { PageType } from "../App";
 
 const Contact: FC<PageType> = ({ setActive }) => {
     return (
-        <Section setActive={setActive} className="bg-blue-400" id="contact">
+        <Section setActive={setActive} className="bg-emerald-600" id="contact">
             Contact
         </Section>
     );

@@ -25,7 +25,7 @@ const Section: FC<SectionType> = ({
         <motion.section
             ref={ref}
             id={id}
-            className="pt-20 px-3"
+            className=" px-3"
             {...otherProps}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
