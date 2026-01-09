@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef, FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
