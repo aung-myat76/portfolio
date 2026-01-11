@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 type CardType = {
     title: string;
     description: string;
-    to: string;
+    to?: string;
     children: ReactNode;
 };
 
-const Card: FC<CardType> = ({ title, description, to, children }) => {
+const Card: FC<CardType> = ({ title, description, to = "", children }) => {
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
