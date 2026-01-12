@@ -2,13 +2,7 @@ import type { FC } from "react";
 import Section from "../components/Section";
 import type { PageType } from "../App";
 import Card from "../components/Card";
-import {
-    FaBook,
-    FaClipboardList,
-    FaFilm,
-    FaTruckLoading,
-    FaWeight
-} from "react-icons/fa";
+import { FaClipboardList, FaTruckLoading, FaWeight } from "react-icons/fa";
 import { FaCircleArrowDown, FaPhotoFilm } from "react-icons/fa6";
 
 const Works: FC<PageType> = ({ setActive }) => {
