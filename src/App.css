@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-    @apply text-emerald-900;
+    @apply text-emerald-900 font-sans;
 }
 
 #about {

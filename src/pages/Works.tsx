@@ -2,7 +2,13 @@ import type { FC } from "react";
 import Section from "../components/Section";
 import type { PageType } from "../App";
 import Card from "../components/Card";
-import { FaClipboardList, FaFilm, FaWeight } from "react-icons/fa";
+import {
+    FaBook,
+    FaClipboardList,
+    FaFilm,
+    FaTruckLoading,
+    FaWeight
+} from "react-icons/fa";
 import { FaCircleArrowDown, FaPhotoFilm } from "react-icons/fa6";
 
 const Works: FC<PageType> = ({ setActive }) => {
@@ -41,10 +47,10 @@ const Works: FC<PageType> = ({ setActive }) => {
                     <FaPhotoFilm className="text-3xl" />
                 </Card>
                 <Card
-                    title="Movies App"
-                    description="Movies app that you can find movies     with title"
-                    to="https://movie-app-seven-sigma-91.vercel.app">
-                    <FaFilm className="text-3xl" />
+                    title="Receiving Note"
+                    description="Note app that is dedicated to my current company needs"
+                    to="https://receiving-note-aung-myat-htut.vercel.app">
+                    <FaTruckLoading className="text-3xl" />
                 </Card>
                 <Card
                     title="Calories Tracker"

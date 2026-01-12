@@ -32,6 +32,7 @@ const CopyText: FC<CopyTextType> = ({ text }) => {
                 <AnimatePresence mode="wait" initial={false}>
                     {!isCopy ? (
                         <motion.div
+                            className="cursor-pointer"
                             key="copy"
                             initial={{ opacity: 0, x: 5 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -41,6 +42,7 @@ const CopyText: FC<CopyTextType> = ({ text }) => {
                         </motion.div>
                     ) : (
                         <motion.div
+                            className="cursor-pointer"
                             key="copied"
                             initial={{ opacity: 0, x: 5 }}
                             animate={{ opacity: 1, x: 0 }}

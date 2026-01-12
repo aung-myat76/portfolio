@@ -14,7 +14,7 @@ const Section: FC<SectionType> = ({
     ...otherProps
 }) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { amount: 0.6 });
+    const isInView = useInView(ref, { amount: 0.5 });
 
     useEffect(() => {
         if (isInView) {
@@ -30,7 +30,7 @@ const Section: FC<SectionType> = ({
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}>
+            transition={{ duration: 0.8, ease: "easeInOut" }}>
             {children}
         </motion.section>
     );
