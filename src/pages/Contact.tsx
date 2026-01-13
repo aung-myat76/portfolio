@@ -21,7 +21,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
     const [error, setError] = useState("");
 
     const inputCls =
-        "w-full mb-2 text-emerald-900 text-emerald-900 font-bold focus:outline-emerald-900 px-2 py-1 bg-stone-100";
+        "w-full mb-2 rounded-sm text-emerald-900 text-emerald-900 font-bold focus:outline-emerald-900 px-2 py-1 bg-stone-100";
 
     const handleMessageSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -79,7 +79,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center my-2 gap-2  p-1 bg-emerald-900 text-stone-100 rounded-md font-semibold transition-colors shadow-lg">
+                className="inline-flex items-center my-2 mb-10 gap-2  p-1 bg-emerald-900 text-stone-100 rounded-md font-semibold transition-colors shadow-lg">
                 <FiDownload />
                 Download CV
             </motion.a>
@@ -123,7 +123,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                 <textarea
                     placeholder="Message"
                     name="message"
-                    className={inputCls + " h-20"}></textarea>
+                    className={inputCls + " h-30"}></textarea>
 
                 <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -133,7 +133,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                     {isSending ? "Sending Message..." : "Send Message"}
                 </motion.button>
             </form>
-            <div className="flex justify-center items-center absolute bottom-0 left-0 bg-emerald-900 text-3xl py-2 w-full">
+            <div className="flex justify-center items-center absolute bottom-0 left-0 bg-emerald-900 text-3xl py-5 w-full">
                 <ContactLink to="mailto:zz762389@gmail.com">
                     <FaEnvelope />
                 </ContactLink>

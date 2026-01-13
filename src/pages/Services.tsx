@@ -10,7 +10,7 @@ const Services: FC<PageType> = ({ setActive }) => {
             setActive={setActive}
             className="bg-emerald-700 text-stone-100 py-20 px-3 "
             id="services">
-            <h2 className="text-2xl font-bold mb-5">What I can offer</h2>
+            <h2 className="text-2xl mb-5 font-bold ">What I can offer</h2>
             <Article
                 title="Development"
                 description="Building the full-stack engine using the MERN ecosystem.">

@@ -19,7 +19,7 @@ const Works: FC<PageType> = ({ setActive }) => {
                     </span>
                     <span> websites</span>
                 </div>
-                <p className="text-sm opacity-80">
+                <p className="text-sm opacity-80 my-3">
                     using HTML, CSS, Tailwind, JavaScript, TypeScript, React,
                     Node, Express and MongoDb
                 </p>
@@ -32,25 +32,25 @@ const Works: FC<PageType> = ({ setActive }) => {
                     title="Table Note"
                     description="Excel like app for taking quick table note"
                     to="https://aungmyathtut-table-note.vercel.app">
-                    <FaClipboardList className="text-3xl" />
+                    <FaClipboardList className="text-3xl my-3" />
                 </Card>
                 <Card
                     title="Activity Maker"
                     description="You can make activiy img with ease"
                     to="https://activity-maker-aungmyathtut.vercel.app">
-                    <FaPhotoFilm className="text-3xl" />
+                    <FaPhotoFilm className="text-3xl my-3" />
                 </Card>
                 <Card
                     title="Receiving Note"
                     description="Note app that is dedicated to my current company needs"
                     to="https://receiving-note-aung-myat-htut.vercel.app">
-                    <FaTruckLoading className="text-3xl" />
+                    <FaTruckLoading className="text-3xl my-3" />
                 </Card>
                 <Card
                     title="Calories Tracker"
                     description="You can track your consumed calories"
                     to="https://calories-tracker-nine.vercel.app">
-                    <FaWeight className="text-3xl" />
+                    <FaWeight className="text-3xl my-3" />
                 </Card>
             </div>
         </Section>

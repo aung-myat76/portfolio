@@ -14,8 +14,12 @@ body {
     @apply flex justify-between items-center;
 }
 
+.nav-link {
+    @apply text-lg;
+}
+
 .nav-active {
-    @apply text-emerald-900  text-xl;
+    @apply text-emerald-900  text-2xl;
 }
 
 section {
