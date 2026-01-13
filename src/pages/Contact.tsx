@@ -21,7 +21,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
     const [error, setError] = useState("");
 
     const inputCls =
-        "w-full mb-2 text-emerald-900 font-bold focus:outline-emerald-900 px-2 py-1 bg-stone-100";
+        "w-full mb-2 text-emerald-900 text-emerald-900 font-bold focus:outline-emerald-900 px-2 py-1 bg-stone-100";
 
     const handleMessageSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -30,7 +30,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
         const name = formData.get("name");
         const email = formData.get("email");
         const message = formData.get("message");
-        console.log(name);
+
         if (!name || !email || !message) {
             setError("Please fill all input fields");
             return;
@@ -66,7 +66,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
     return (
         <Section
             setActive={setActive}
-            className="bg-emerald-600 pt-20 px-5 text-stone-100"
+            className="bg-emerald-600 relative pt-20 px-5 text-stone-100"
             id="contact">
             <h2 className="text-2xl font-bold mb-2">
                 Let's build something great together
@@ -91,7 +91,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                         <motion.p
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
-                            exit={{ scale: 1 }}
+                            exit={{ scale: 0 }}
                             key="noData"
                             className="text-center my-2 font-bold rounded-sm bg-red-500">
                             {error}
@@ -102,7 +102,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                             key="success"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
-                            exit={{ scale: 1 }}
+                            exit={{ scale: 0 }}
                             className="text-center my-2 font-bold bg-emerald-500">
                             {"Message has been sent!"}
                         </motion.p>
@@ -111,7 +111,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                         <motion.p
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
-                            exit={{ scale: 1 }}
+                            exit={{ scale: 0 }}
                             key="error"
                             className="text-center my-2 font-bold bg-red-500">
                             {"Could not sent the email!"}
@@ -133,24 +133,18 @@ const Contact: FC<PageType> = ({ setActive }) => {
                     {isSending ? "Sending Message..." : "Send Message"}
                 </motion.button>
             </form>
-            <div className="font-mono">
-                <ContactLink
-                    to="mailto:zz762389@gmail.com"
-                    title="zz762389@gmail.com">
-                    <FaEnvelope className="" />
+            <div className="flex justify-center items-center absolute bottom-0 left-0 bg-emerald-900 text-3xl py-2 w-full">
+                <ContactLink to="mailto:zz762389@gmail.com">
+                    <FaEnvelope />
                 </ContactLink>
 
-                <ContactLink
-                    to="https://github.com/aung-myat76"
-                    title="aung-myat76">
+                <ContactLink to="https://github.com/aung-myat76">
                     <FaGithub />
                 </ContactLink>
-                <ContactLink to="tel:+959669483086" title="+959669483086">
+                <ContactLink to="tel:+959669483086">
                     <HiPhoneArrowUpRight />
                 </ContactLink>
-                <ContactLink
-                    to="https://t.me/aung_myat_htut"
-                    title="@aung_myat_htut">
+                <ContactLink to="https://t.me/aung_myat_htut">
                     <FaTelegram />
                 </ContactLink>
             </div>
