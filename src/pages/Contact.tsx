@@ -4,10 +4,14 @@ import Section from "../components/Section";
 import type { PageType } from "../App";
 import { FiDownload } from "react-icons/fi";
 import ContactLink from "../components/ContactLink";
-import { FaEnvelope, FaGithub, FaTelegram } from "react-icons/fa";
+import { FaDotCircle, FaEnvelope, FaGithub, FaTelegram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 import { HiPhoneArrowUpRight } from "react-icons/hi2";
+import Quote from "../components/Quote";
+
+import profileImg from "../assets/profile.jpg";
+import { Link } from "react-router-dom";
 
 const Contact: FC<PageType> = ({ setActive }) => {
     const formRef = useRef<HTMLFormElement>(null);
@@ -21,7 +25,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
     const [error, setError] = useState("");
 
     const inputCls =
-        "w-full mb-2 rounded-sm text-emerald-900 text-emerald-900 font-bold focus:outline-emerald-900 px-2 py-1 bg-stone-100";
+        "w-full mb-2 rounded-md text-emerald-900 text-emerald-900 font-bold focus:outline-emerald-900 px-2 py-1 bg-stone-100";
 
     const handleMessageSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -68,21 +72,46 @@ const Contact: FC<PageType> = ({ setActive }) => {
             setActive={setActive}
             className="bg-emerald-600 relative pt-20 px-5 text-stone-100"
             id="contact">
-            <h2 className="text-2xl font-bold mb-2">
-                Let's build something great together
-            </h2>
-            {/* <p>I usually respond within 24 hours</p> */}
-            <motion.a
-                href="/my_resume.pdf"
-                download="AungMyatHtut_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center my-2 mb-10 gap-2  p-1 bg-emerald-900 text-stone-100 rounded-md font-semibold transition-colors shadow-lg">
-                <FiDownload />
-                Download CV
-            </motion.a>
+            <Quote>Let's Build Something Great Together</Quote>
+            <div className="flex gap-2 my-5">
+                <img
+                    src={profileImg}
+                    className="w-30 h-40 object-cover bg-center shrink-0 rounded-md"
+                />
+                <div className="bg-emerald-400 h-40   p-2 rounded-md">
+                    <div className="my-1    ">
+                        <h2 className="font-bold text-lg">
+                            {" "}
+                            Available for Work
+                        </h2>
+                        <p className="text-[10px] mb-1">
+                            Based in Yangon, Myanmar (GMT+6:30)
+                        </p>
+                        <p className="text-xs font-bold">
+                            I usually respond within 24 hours. Let's build
+                            something amazing!
+                        </p>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <motion.a
+                            href="/my_resume.pdf"
+                            download="AungMyatHtut_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-flex items-center my-1 gap-2  px-2 py-1 text-nowrap text-emerald-900 bg-stone-100 rounded-full font-semibold transition-colors shadow-lg">
+                            <FiDownload />
+                            Download CV
+                        </motion.a>
+                        <Link
+                            className="text-3xl"
+                            to="https://t.me/aung_myat_htut">
+                            <FaTelegram />
+                        </Link>
+                    </div>
+                </div>
+            </div>
 
             <form ref={formRef} onSubmit={handleMessageSubmit} className="my-5">
                 {/* <p className="text-lg font-bold my-3">Contact with me</p> */}
@@ -93,7 +122,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
                             key="noData"
-                            className="text-center my-2 font-bold rounded-sm bg-red-500">
+                            className="text-center my-2 font-bold rounded-md bg-red-500">
                             {error}
                         </motion.p>
                     )}
@@ -103,7 +132,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
-                            className="text-center my-2 font-bold bg-emerald-500">
+                            className="text-center my-2 font-bold bg-emerald-500 rounded-md">
                             {"Message has been sent!"}
                         </motion.p>
                     )}
@@ -113,17 +142,28 @@ const Contact: FC<PageType> = ({ setActive }) => {
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
                             key="error"
-                            className="text-center my-2 font-bold bg-red-500">
+                            className="text-center my-2 font-bold bg-red-500 rounded-md">
                             {"Could not sent the email!"}
                         </motion.p>
                     )}
                 </AnimatePresence>
-                <input className={inputCls} name="name" placeholder="Name" />
-                <input className={inputCls} name="email" placeholder="Email" />
-                <textarea
+                <motion.input
+                    whileFocus={{ scale: 1.025 }}
+                    className={inputCls}
+                    name="name"
+                    placeholder="Name"
+                />
+                <motion.input
+                    whileFocus={{ scale: 1.025 }}
+                    className={inputCls}
+                    name="email"
+                    placeholder="Email"
+                />
+                <motion.textarea
+                    whileFocus={{ scale: 1.025 }}
                     placeholder="Message"
                     name="message"
-                    className={inputCls + " h-30"}></textarea>
+                    className={inputCls + " h-30"}></motion.textarea>
 
                 <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -133,6 +173,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                     {isSending ? "Sending Message..." : "Send Message"}
                 </motion.button>
             </form>
+
             <div className="flex justify-center items-center absolute bottom-0 left-0 bg-emerald-900 text-3xl py-5 w-full">
                 <ContactLink to="mailto:zz762389@gmail.com">
                     <FaEnvelope />

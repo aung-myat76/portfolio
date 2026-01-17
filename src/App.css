@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     @apply text-emerald-900 font-sans;
 }
@@ -8,6 +12,10 @@ body {
     background: url("./assets/profile4.png") no-repeat center;
     background-size: auto;
     width: 100%;
+}
+
+.stack-icons svg {
+    font-size: 100px;
 }
 
 .flex-row {

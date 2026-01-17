@@ -9,7 +9,7 @@ const Works: FC<PageType> = ({ setActive }) => {
     return (
         <Section
             setActive={setActive}
-            className="pt-20 px-3 font-mono bg-emerald-800 text-stone-100 font-bold"
+            className="pt-20  px-3 font-mono bg-emerald-800 text-stone-100 font-bold"
             id="works">
             <div>
                 <p>I've created </p>
