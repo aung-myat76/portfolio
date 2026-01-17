@@ -4,7 +4,7 @@ import Section from "../components/Section";
 import type { PageType } from "../App";
 import { FiDownload } from "react-icons/fi";
 import ContactLink from "../components/ContactLink";
-import { FaDotCircle, FaEnvelope, FaGithub, FaTelegram } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaTelegram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 import { HiPhoneArrowUpRight } from "react-icons/hi2";

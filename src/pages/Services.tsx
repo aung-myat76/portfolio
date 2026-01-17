@@ -10,7 +10,6 @@ import {
     FaNode,
     FaPaintRoller,
     FaReact,
-    FaRocket,
     FaTools
 } from "react-icons/fa";
 import Article from "../components/Article";
