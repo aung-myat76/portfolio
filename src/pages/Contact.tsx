@@ -87,7 +87,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                         <p className="text-[10px] mb-1">
                             Based in Yangon, Myanmar (GMT+6:30)
                         </p>
-                        <p className="text-xs font-bold">
+                        <p className="text-xs font-bold my-1">
                             I usually respond within 24 hours. Let's build
                             something amazing!
                         </p>
