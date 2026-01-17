@@ -5,10 +5,7 @@ import CopyText from "../components/CopyText";
 
 const About: FC<PageType> = ({ setActive }) => {
     return (
-        <Section
-            setActive={setActive}
-            className="pt-20 px-3 bg-[url('/hero.svg')] bg-cover bg-center h-screen"
-            id="about">
+        <Section setActive={setActive} className="pt-20 px-3" id="about">
             <div className=" mb-3 font-bold text-md">
                 Hi, My name is{" "}
                 <div className="text-2xl font-mono">Aung Myat Htut </div>
