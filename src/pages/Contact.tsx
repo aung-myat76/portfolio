@@ -78,7 +78,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                     src={profileImg}
                     className="w-30 h-45 object-cover bg-center shrink-0 rounded-md"
                 />
-                <div className="flex flex-col gap-2 bg-emerald-400 h-45   p-2 rounded-md">
+                <div className="flex flex-col gap-2 bg-emerald-900 h-45   p-2 rounded-md">
                     <div className="my-1    ">
                         <h2 className="font-bold text-lg">
                             {" "}
