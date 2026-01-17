@@ -9,7 +9,7 @@ body {
 }
 
 #about {
-    background: url("hero.svg") no-repeat;
+    background: no-repeat;
     background-position: bottom;
     background-size: auto;
     width: 100%;
