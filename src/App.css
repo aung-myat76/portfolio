@@ -1,13 +1,8 @@
 @import "tailwindcss";
 
-* {
-    box-sizing: border-box;
-}
-
-body {
+/* body {
     @apply text-emerald-900 font-sans;
-}
-
+} */
 #about {
     background: no-repeat;
     background-position: bottom;
@@ -16,7 +11,7 @@ body {
 }
 
 .stack-icons svg {
-    font-size: 100px;
+    /* @apply text-[50px]; */
 }
 
 .flex-row {
@@ -32,5 +27,5 @@ body {
 }
 
 section {
-    height: 100vh;
+    @apply h-[100dvh] pt-[12dvh];
 }

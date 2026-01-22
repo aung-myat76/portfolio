@@ -70,28 +70,27 @@ const Contact: FC<PageType> = ({ setActive }) => {
     return (
         <Section
             setActive={setActive}
-            className="bg-emerald-600 relative pt-20 px-5 text-stone-100"
+            className="bg-emerald-600 text-stone-100"
             id="contact">
             <Quote>Let's Build Something Great Together</Quote>
-            <div className="flex gap-2 my-5">
-                <img
-                    src={profileImg}
-                    className="w-30 h-45 object-cover bg-center shrink-0 rounded-md"
-                />
-                <div className="flex flex-col gap-2 bg-emerald-900 h-45   p-2 rounded-md">
-                    <div className="my-1    ">
-                        <h2 className="font-bold text-lg">
-                            {" "}
-                            Available for Work
-                        </h2>
-                        <p className="text-[10px] mb-1">
-                            Based in Yangon, Myanmar (GMT+6:30)
-                        </p>
-                        <p className="text-xs font-bold my-1">
-                            I usually respond within 24 hours. Let's build
-                            something amazing!
-                        </p>
-                    </div>
+
+            <div className="flex mt-5 flex-col gap-2 bg-emerald-900 rounded-lg   p-2 mx-3">
+                <div className="my-1">
+                    <h2 className="font-bold text-lg flex items-center gap-2 mb-2">
+                        {" "}
+                        <img
+                            src={profileImg}
+                            className="w-10 h-10 object-cover bg-center shrink-0 rounded-full"
+                        />
+                        <span> Available for Work</span>
+                    </h2>
+                    <p className="text-[10px] mb-1">
+                        Based in Yangon, Myanmar (GMT+6:30)
+                    </p>
+                    <p className="text-xs font-bold my-1">
+                        I usually respond within 24 hours. Let's build something
+                        amazing!
+                    </p>
                     <div className="flex items-center justify-center gap-2">
                         <motion.a
                             href="/my_resume.pdf"
@@ -113,7 +112,10 @@ const Contact: FC<PageType> = ({ setActive }) => {
                 </div>
             </div>
 
-            <form ref={formRef} onSubmit={handleMessageSubmit} className="my-5">
+            <form
+                ref={formRef}
+                onSubmit={handleMessageSubmit}
+                className="my-2 mx-3">
                 {/* <p className="text-lg font-bold my-3">Contact with me</p> */}
                 <AnimatePresence mode="wait">
                     {error && (
@@ -174,7 +176,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                 </motion.button>
             </form>
 
-            <div className="flex justify-center items-center absolute bottom-0 left-0 bg-emerald-900 text-3xl py-5 w-full">
+            <footer className="flex justify-center w-screen bg-emerald-900 text-3xl py-2">
                 <ContactLink to="mailto:zz762389@gmail.com">
                     <FaEnvelope />
                 </ContactLink>
@@ -188,7 +190,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                 <ContactLink to="https://t.me/aung_myat_htut">
                     <FaTelegram />
                 </ContactLink>
-            </div>
+            </footer>
         </Section>
     );
 };

@@ -9,7 +9,7 @@ const About: FC<PageType> = ({ setActive }) => {
         <Section
             style={{ backgroundImage: `url(${heroSvg})` }}
             setActive={setActive}
-            className="pt-20 px-3"
+            className=" px-3 about"
             id="about">
             <div className=" mb-3 font-bold text-md">
                 Hi, My name is{" "}

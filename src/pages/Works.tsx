@@ -9,7 +9,7 @@ const Works: FC<PageType> = ({ setActive }) => {
     return (
         <Section
             setActive={setActive}
-            className="pt-20  px-3 font-mono bg-emerald-800 text-stone-100 font-bold"
+            className=" px-3 font-mono bg-emerald-800 text-stone-100 font-bold"
             id="works">
             <div>
                 <p>I've created </p>
@@ -27,7 +27,7 @@ const Works: FC<PageType> = ({ setActive }) => {
                     Example apps are below <FaCircleArrowDown />
                 </p>
             </div>
-            <div className="mt-5 flex gap-4 items-center justify-center flex-wrap">
+            <div className="mt-3 flex gap-4 items-center justify-center flex-wrap">
                 <Card
                     title="Table Note"
                     description="Excel like app for taking quick table note"
