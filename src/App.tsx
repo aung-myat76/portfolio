@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import "./App.css";
 import Header from "./components/Header";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 export type PageType = {
     setActive: (id: string) => void;
@@ -29,6 +30,7 @@ const App = () => {
             <Works setActive={setActive} />
             <Services setActive={setActive} />
             <Contact setActive={setActive} />
+            <Footer />
         </>
     );
 };

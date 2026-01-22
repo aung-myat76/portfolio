@@ -3,11 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import Section from "../components/Section";
 import type { PageType } from "../App";
 import { FiDownload } from "react-icons/fi";
-import ContactLink from "../components/ContactLink";
-import { FaEnvelope, FaGithub, FaTelegram } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
-import { HiPhoneArrowUpRight } from "react-icons/hi2";
 import Quote from "../components/Quote";
 
 import profileImg from "../assets/profile.jpg";
@@ -115,7 +113,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
             <form
                 ref={formRef}
                 onSubmit={handleMessageSubmit}
-                className="my-2 mx-3">
+                className="my-5 mx-3">
                 {/* <p className="text-lg font-bold my-3">Contact with me</p> */}
                 <AnimatePresence mode="wait">
                     {error && (
@@ -175,22 +173,6 @@ const Contact: FC<PageType> = ({ setActive }) => {
                     {isSending ? "Sending Message..." : "Send Message"}
                 </motion.button>
             </form>
-
-            <footer className="flex absolute bottom-0 left-0 justify-center w-screen bg-emerald-900 text-3xl py-2">
-                <ContactLink to="mailto:zz762389@gmail.com">
-                    <FaEnvelope />
-                </ContactLink>
-
-                <ContactLink to="https://github.com/aung-myat76">
-                    <FaGithub />
-                </ContactLink>
-                <ContactLink to="tel:+959669483086">
-                    <HiPhoneArrowUpRight />
-                </ContactLink>
-                <ContactLink to="https://t.me/aung_myat_htut">
-                    <FaTelegram />
-                </ContactLink>
-            </footer>
         </Section>
     );
 };

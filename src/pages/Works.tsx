@@ -11,7 +11,7 @@ const Works: FC<PageType> = ({ setActive }) => {
             setActive={setActive}
             className=" px-3 font-mono bg-emerald-800 text-stone-100 font-bold"
             id="works">
-            <div>
+            <div className="">
                 <p>I've created </p>
                 <div className="py-2">
                     <span className="text-2xl bg-stone-100 text-emerald-800 p-1 rounded-md">
