@@ -70,7 +70,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
     return (
         <Section
             setActive={setActive}
-            className="bg-emerald-600 text-stone-100"
+            className="relative bg-emerald-600 text-stone-100"
             id="contact">
             <Quote>Let's Build Something Great Together</Quote>
 
@@ -176,7 +176,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                 </motion.button>
             </form>
 
-            <footer className="flex justify-center w-screen bg-emerald-900 text-3xl py-2">
+            <footer className="flex absolute bottom-0 left-0 justify-center w-screen bg-emerald-900 text-3xl py-2">
                 <ContactLink to="mailto:zz762389@gmail.com">
                     <FaEnvelope />
                 </ContactLink>
