@@ -18,14 +18,28 @@
     @apply flex justify-between items-center;
 }
 
-.nav-link {
+.nav-link svg {
     @apply text-lg;
 }
 
-.nav-active {
+.nav-link span {
+    @apply font-bold;
+}
+
+.nav-active svg {
     @apply text-emerald-900  text-2xl;
+}
+
+.nav-active span {
+    @apply text-emerald-900 border-b-2 border-emerald-900;
 }
 
 section {
     @apply h-[100dvh] pt-[12dvh];
+}
+
+@media screen and (min-width: 768px) {
+    section:not(.about) {
+        @apply md:px-25;
+    }
 }

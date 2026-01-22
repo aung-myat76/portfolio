@@ -17,7 +17,7 @@ const Nav: FC<NavType> = ({ active }) => {
                 className={
                     active === "about" ? "nav-active nav-link" : "nav-link"
                 }>
-                <FaUser title="About" />
+                <FaUser title="About" className="md:hidden" />
                 <span className="hidden md:block">About</span>
             </HashLink>
             <HashLink
@@ -26,7 +26,7 @@ const Nav: FC<NavType> = ({ active }) => {
                 className={
                     active === "works" ? "nav-active nav-link" : "nav-link"
                 }>
-                <FaBriefcase title="Works" />
+                <FaBriefcase title="Works" className="md:hidden" />
                 <span className="hidden md:block">Works</span>
             </HashLink>
             <HashLink
@@ -35,7 +35,7 @@ const Nav: FC<NavType> = ({ active }) => {
                 className={
                     active === "services" ? "nav-active nav-link" : "nav-link"
                 }>
-                <FaTools title="Services" />
+                <FaTools title="Services" className="md:hidden" />
                 <span className="hidden md:block">Services</span>
             </HashLink>
             <HashLink
@@ -44,7 +44,7 @@ const Nav: FC<NavType> = ({ active }) => {
                 className={
                     active === "contact" ? "nav-active nav-link" : "nav-link"
                 }>
-                <FaEnvelope title="Contact" />
+                <FaEnvelope title="Contact" className="md:hidden" />
                 <span className="hidden md:block">Contact </span>
             </HashLink>
         </nav>
