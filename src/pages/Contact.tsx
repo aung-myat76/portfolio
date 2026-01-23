@@ -74,7 +74,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
 
             <div className="flex my-10 flex-col gap-2 bg-emerald-900 rounded-lg   p-2 mx-3">
                 <div className="my-1">
-                    <h2 className="font-bold text-lg flex items-center gap-2 mb-2">
+                    <h2 className="font-bold text-lg flex items-center gap-2 mb-2 ">
                         {" "}
                         <img
                             src={profileImg}
@@ -89,7 +89,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                         I usually respond within 24 hours. Let's build something
                         amazing!
                     </p>
-                    <div className="flex items-center justify-center gap-2">
+                    <div className="my-3 flex items-center justify-center gap-2">
                         <motion.a
                             href="/my_resume.pdf"
                             download="AungMyatHtut_Resume.pdf"

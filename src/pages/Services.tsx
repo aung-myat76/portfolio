@@ -53,17 +53,17 @@ const Services: FC<PageType> = ({ setActive }) => {
             </Article> */}
             <div className="mt-5">
                 {/* <span className="text-xl font-bold ">My Tech Stack</span> */}
-                <div className="flex py-1 rounded-lg bg-stone-100 text-2xl  gap-3 justify-evenly items-center flex-nowrap">
-                    <FaHtml5 className=" p-1 rounded-sm text-orange-600" />
-                    <FaCss3 className=" p-1 rounded-sm text-blue-600" />
-                    <FaJs className=" p-1 rounded-sm text-yellow-500" />
-                    <SiTypescript className=" p-1 rounded-sm text-blue-700" />
-                    <RiTailwindCssFill className=" p-1 rounded-sm text-green-600" />
-                    <TbBrandFramerMotion className=" p-1 rounded-sm text-pink-600" />
-                    <FaReact className=" p-1 rounded-sm text-blue-700" />
-                    <FaNode className=" p-1 rounded-sm text-green-800" />
-                    <SiExpress className=" p-1 rounded-sm text-stone-900" />
-                    <DiMongodb className=" p-1 rounded-sm text-green-900" />
+                <div className="flex py-1 rounded-lg  text-3xl  gap-3 justify-evenly items-center flex-nowrap">
+                    <FaHtml5 className="bg-stone-100 p-1 rounded-sm text-orange-600" />
+                    <FaCss3 className="bg-stone-100 p-1 rounded-sm text-blue-600" />
+                    <FaJs className="bg-stone-100 p-1 rounded-sm text-yellow-500" />
+                    <SiTypescript className="bg-stone-100 p-1 rounded-sm text-blue-700" />
+                    <RiTailwindCssFill className="bg-stone-100 p-1 rounded-sm text-green-600" />
+                    <TbBrandFramerMotion className="bg-stone-100 p-1 rounded-sm text-pink-600" />
+                    <FaReact className="bg-stone-100 p-1 rounded-sm text-blue-700" />
+                    <FaNode className="bg-stone-100 p-1 rounded-sm text-green-800" />
+                    <SiExpress className="bg-stone-100 p-1 rounded-sm text-stone-900" />
+                    <DiMongodb className="bg-stone-100 p-1 rounded-sm text-green-900" />
                 </div>
             </div>
         </Section>
