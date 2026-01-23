@@ -72,7 +72,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
             id="contact">
             <Quote>Let's Build Something Great Together</Quote>
 
-            <div className="flex mt-5 flex-col gap-2 bg-emerald-900 rounded-lg   p-2 mx-3">
+            <div className="flex my-10 flex-col gap-2 bg-emerald-900 rounded-lg   p-2 mx-3">
                 <div className="my-1">
                     <h2 className="font-bold text-lg flex items-center gap-2 mb-2">
                         {" "}
@@ -113,7 +113,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
             <form
                 ref={formRef}
                 onSubmit={handleMessageSubmit}
-                className="my-5 mx-3">
+                className=" mx-3">
                 {/* <p className="text-lg font-bold my-3">Contact with me</p> */}
                 <AnimatePresence mode="wait">
                     {error && (

@@ -35,7 +35,7 @@
 }
 
 section {
-    @apply h-[100dvh] pt-[12dvh];
+    @apply h-[100vh] pt-[12dvh];
 }
 
 @media screen and (min-width: 768px) {
