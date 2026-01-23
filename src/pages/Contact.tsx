@@ -10,7 +10,6 @@ import Quote from "../components/Quote";
 
 import profileImg from "../assets/profile.jpg";
 import ContactLink from "../components/ContactLink";
-import { HiPhoneArrowUpRight } from "react-icons/hi2";
 import { BiPhoneCall } from "react-icons/bi";
 
 const Contact: FC<PageType> = ({ setActive }) => {
