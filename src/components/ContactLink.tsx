@@ -10,7 +10,9 @@ type ContactLinkType = {
 const ContactLink: FC<ContactLinkType> = ({ to, children }) => {
     return (
         <motion.div whileHover={{ y: -5 }} whileTap={{ scale: 0.9 }}>
-            <Link to={to} className="flex items-center gap-2 py-1 px-2 mx-1">
+            <Link
+                to={to}
+                className="flex items-center gap-2 p-1 mx-1 text-emerald-900 bg-stone-100 rounded-full">
                 {children}
             </Link>
         </motion.div>

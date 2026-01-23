@@ -40,6 +40,6 @@ section {
 
 @media screen and (min-width: 768px) {
     section:not(.about) {
-        @apply md:px-25;
+        @apply md:px-35;
     }
 }

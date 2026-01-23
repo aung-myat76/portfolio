@@ -3,13 +3,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import Section from "../components/Section";
 import type { PageType } from "../App";
 import { FiDownload } from "react-icons/fi";
-import { FaTelegram } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaTelegram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 import Quote from "../components/Quote";
 
 import profileImg from "../assets/profile.jpg";
-import { Link } from "react-router-dom";
+import ContactLink from "../components/ContactLink";
+import { HiPhoneArrowUpRight } from "react-icons/hi2";
+import { BiPhoneCall } from "react-icons/bi";
 
 const Contact: FC<PageType> = ({ setActive }) => {
     const formRef = useRef<HTMLFormElement>(null);
@@ -72,13 +74,16 @@ const Contact: FC<PageType> = ({ setActive }) => {
             id="contact">
             <Quote>Let's Build Something Great Together</Quote>
 
-            <div className="flex my-10 flex-col gap-2 bg-emerald-900 rounded-lg   p-2 mx-3">
+            <div className="flex my-10 gap-2 bg-emerald-900 rounded-lg   p-2 mx-3 md:my-5 ">
+                <img
+                    src={profileImg}
+                    className="w-25 object-cover bg-center shrink-0 rounded-md hidden md:block"
+                />
                 <div className="my-1">
                     <h2 className="font-bold text-lg flex items-center gap-2 mb-2 ">
-                        {" "}
                         <img
                             src={profileImg}
-                            className="w-10 h-10 object-cover bg-center shrink-0 rounded-full"
+                            className="w-10 h-10 rounded-full object-cover bg-center shrink-0 md:hidden"
                         />
                         <span> Available for Work</span>
                     </h2>
@@ -101,11 +106,21 @@ const Contact: FC<PageType> = ({ setActive }) => {
                             <FiDownload />
                             Download CV
                         </motion.a>
-                        <Link
-                            className="text-3xl"
-                            to="https://t.me/aung_myat_htut">
-                            <FaTelegram />
-                        </Link>
+                        <div className="flex gap-2">
+                            <ContactLink to="mailto:zz762389@gmail.com">
+                                <FaEnvelope />
+                            </ContactLink>
+
+                            <ContactLink to="https://github.com/aung-myat76">
+                                <FaGithub />
+                            </ContactLink>
+                            <ContactLink to="tel:+959669483086">
+                                <BiPhoneCall />
+                            </ContactLink>
+                            <ContactLink to="https://t.me/aung_myat_htut">
+                                <FaTelegram />
+                            </ContactLink>
+                        </div>
                     </div>
                 </div>
             </div>
