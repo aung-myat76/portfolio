@@ -10,7 +10,7 @@ import Quote from "../components/Quote";
 
 import profileImg from "../assets/profile.jpg";
 import ContactLink from "../components/ContactLink";
-import { BiPhoneCall } from "react-icons/bi";
+// import { BiPhoneCall } from "react-icons/bi";
 
 const Contact: FC<PageType> = ({ setActive }) => {
     const formRef = useRef<HTMLFormElement>(null);
