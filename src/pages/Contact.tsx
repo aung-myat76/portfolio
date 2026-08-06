@@ -113,9 +113,7 @@ const Contact: FC<PageType> = ({ setActive }) => {
                             <ContactLink to="https://github.com/aung-myat76">
                                 <FaGithub />
                             </ContactLink>
-                            <ContactLink to="tel:+959669483086">
-                                <BiPhoneCall />
-                            </ContactLink>
+
                             <ContactLink to="https://t.me/aung_myat_htut">
                                 <FaTelegram />
                             </ContactLink>
